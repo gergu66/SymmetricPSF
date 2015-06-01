@@ -1,5 +1,6 @@
-function [ FI0 ] = firstbesselfunct(theta1)
-    %first: this part of the code is in-charge of the integral with the first bessel function
+function [ FI1 ] = firstbesselfunct(theta1)
+    %FIRSTBESSELFUNCT: this part of the code is in-charge of the integral with the second bessel function
+    %all this things depend on theta
     %all this things depend on theta
     global M n h k0 k rp thetap;
     theta(:,1) = theta1(:);
@@ -32,5 +33,5 @@ function [ FI0 ] = firstbesselfunct(theta1)
     %end
     psy = h(M-1)*n(M)*cos(theta(:,M)) - h(1)*n(1)*cos(theta1(:));
     %this are the functions to integrate
-    FI0 = sqrt(cos(theta1(:))).*sin(theta1(:)).*exp(1i*k0*psy(:)).*(TN1(:,1)+TN1(:,2).*cos(theta(:,M))).*besselj(0,k(1).*sin(theta1(:))*rp*sin(thetap)).*exp(1i*k(M)*rp*cos(thetap).*cos(theta(:,M)));
+    FI1 = sqrt(cos(theta1(:))).*sin(theta1(:)).*exp(1i*k0*psy(:)).*TN1(:,2).*sin(theta(:,M)).*besselj(1,k(1).*sin(theta1(:))*rp*sin(thetap)).*exp(1i*k(M)*rp*cos(thetap).*cos(theta(:,M)));
 end

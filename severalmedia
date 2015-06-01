@@ -1,5 +1,5 @@
-%#eml
-%SEVERALMEDIA: this is the main body of the calculation, all the information about the different media and the NA of the imaging system needs to be inserted in this code.
+%MAIN
+%SEVERALMEDIA: this is the main body of the calculation, all the information about the different media and the NA of the imaging system needs to be inserted in this code. NOTE: At some point I was trying to parallelize this code, therefore it has extra comments that are not needed
 save('two170coverslip.mat')
 %for w = 1:1:12
 %w = 1;
