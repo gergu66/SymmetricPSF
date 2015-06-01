@@ -1,6 +1,5 @@
-function [ FI0 ] = serothbesselfunct(theta1)
-    %SEROTHBESSELFUNCT Summary of this function goes here
-    % Detailed explanation goes here
+function [ FI0 ] = firstbesselfunct(theta1)
+    %first: this part of the code is in-charge of the integral with the first bessel function
     %all this things depend on theta
     global M n h k0 k rp thetap;
     theta(:,1) = theta1(:);
